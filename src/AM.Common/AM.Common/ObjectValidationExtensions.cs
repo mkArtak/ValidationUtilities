@@ -2,7 +2,7 @@
 
 namespace AM.Common.ValidationFramework
 {
-    public static class ValidationExtensions
+    public static class ObjectValidationExtensions
     {
         public static Ensure<T> Ensure<T>(this T parameter)
         {
@@ -14,16 +14,6 @@ namespace AM.Common.ValidationFramework
             if (context.ParameterValue == null)
             {
                 throw new ArgumentNullException();
-            }
-
-            return context;
-        }
-
-        public static Ensure<string> IsNotNullOrEmpty(this Ensure<string> context)
-        {
-            if (String.IsNullOrEmpty(context.ParameterValue))
-            {
-                throw new ArgumentException();
             }
 
             return context;
