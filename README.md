@@ -15,7 +15,7 @@ public void SomeMethod(string argument1)
 This can now be rewritten as:
 public void SomeMethod(string argument1)  
 {  
-**  argument1.Ensure().IsNotNullOrWhitespace();  
+  **argument1.Ensure().IsNotNullOrWhitespace();**   
       
    // some logic here.  
 }  
