@@ -12,7 +12,7 @@ public void SomeMethod(string argument1)
     // some logic here.  
 }  
 
-This can now be rewritten as:
+This can now be rewritten as:  
 public void SomeMethod(string argument1)  
 {  
     **argument1.Ensure().IsNotNullOrWhitespace();**   
