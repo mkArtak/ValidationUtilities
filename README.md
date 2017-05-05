@@ -6,7 +6,7 @@ Imagine the below simple example:
 *{  
 *    **if (string.IsNullOrWhiteSpace(argument1))**  
 *    **{**  
-*        **throw new ArgumentException("Invalid value");**  
+*        throw new ArgumentException("Invalid value");  
 *    **}**  
 *      
 *    // some logic here.  
