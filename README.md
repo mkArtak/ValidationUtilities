@@ -4,10 +4,10 @@ Imagine the below simple example:
 
 public void SomeMethod(string argument1)
 {
-#   if (string.IsNullOrWhiteSpace(argument1))
-#   {
-#     throw new ArgumentException("Invalid value");
-#   }
+**   if (string.IsNullOrWhiteSpace(argument1))
+   {
+     throw new ArgumentException("Invalid value");
+   } **
     
     // some logic here.
 }
@@ -15,7 +15,7 @@ public void SomeMethod(string argument1)
 This can now be rewritten as:
 public void SomeMethod(string argument1)
 {
-#   argument1.Ensure().IsNotNullOrWhitespace();
+**  argument1.Ensure().IsNotNullOrWhitespace();
     
    // some logic here.
 }
