@@ -21,5 +21,22 @@ namespace AM.Common.ValidationFramework.Tests
             IEnumerable<object> items = new object[] { new object() };
             items.Ensure().IsNotEmptyEnumerable();
         }
+
+        [TestMethod]
+        public void IsNotEmptyEnumerable_ExceptionHasParamName()
+        {
+            const string testParamName = "testParam";
+
+            try
+            {
+                IEnumerable<object> obj = new object[] { };
+                obj.Ensure().IsNotEmptyEnumerable(testParamName);
+                Assert.Fail();
+            }
+            catch (ArgumentException aex)
+            {
+                Assert.AreEqual(testParamName, aex.ParamName);
+            }
+        }
     }
 }

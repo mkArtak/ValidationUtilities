@@ -1,5 +1,5 @@
-using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace AM.Common.ValidationFramework.Tests
 {
@@ -19,6 +19,23 @@ namespace AM.Common.ValidationFramework.Tests
         {
             object value = new object();
             value.Ensure().IsNotNull();
+        }
+
+        [TestMethod]
+        public void IsNotNull_ExceptionHasParamName()
+        {
+            const string testParamName = "testParam";
+
+            try
+            {
+                object obj = null;
+                obj.Ensure().IsNotNull(testParamName);
+                Assert.Fail();
+            }
+            catch (ArgumentException aex)
+            {
+                Assert.AreEqual(testParamName, aex.ParamName);
+            }
         }
     }
 }

@@ -12,13 +12,13 @@ namespace AM.Common.ValidationFramework
         /// <typeparam name="T">The type parameter for the enumerable items.</typeparam>
         /// <param name="context">The context the validation will be happening in.</param>
         /// <returns></returns>
-        public static Ensure<IEnumerable<T>> IsNotEmptyEnumerable<T>(this Ensure<IEnumerable<T>> context)
+        public static Ensure<IEnumerable<T>> IsNotEmptyEnumerable<T>(this Ensure<IEnumerable<T>> context, string paramName = null)
         {
-            context.IsNotNull();
+            context.IsNotNull(paramName);
 
             if (!context.ParameterValue.Any())
             {
-                throw new ArgumentException("Enumeration contains no elements");
+                throw new ArgumentException("Enumeration contains no elements", paramName);
             }
 
             return context;
