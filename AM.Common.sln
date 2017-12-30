@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Common.ValidationFramework", "AM.Common\AM.Common.ValidationFramework.csproj", "{CD58B1B3-9DDB-4052-9360-42E1D4EC29CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Common.ValidationFramework", ".\src\AM.Common\AM.Common.ValidationFramework.csproj", "{CD58B1B3-9DDB-4052-9360-42E1D4EC29CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Common.ValidationFramework.Tests", "..\AM.Common.Tests\AM.Common.ValidationFramework.Tests.csproj", "{16C4F559-76FF-4D76-BB5C-C3014ADD531D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AM.Common.ValidationFramework.Tests", ".\test\AM.Common.Tests\AM.Common.ValidationFramework.Tests.csproj", "{16C4F559-76FF-4D76-BB5C-C3014ADD531D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72CAA73C-FFF2-46F7-99C7-89F0653A1FD5}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\README.md = ..\..\README.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global

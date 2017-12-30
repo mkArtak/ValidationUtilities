@@ -10,11 +10,16 @@ namespace AM.Common.ValidationFramework
     {
         private T parameterValue;
 
+        private readonly string paramName;
+
         internal T ParameterValue { get => this.parameterValue; }
 
-        internal Ensure(T parameterValue)
+        internal string ParameterName { get => this.paramName; }
+
+        internal Ensure(T parameterValue, string parameterName = null)
         {
             this.parameterValue = parameterValue;
+            this.paramName = parameterName;
         }
     }
 }

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <RootNamespace>AM.Common.ValidationFramework</RootNamespace>
+    <AssemblyName>AM.Common.ValidationFramework</AssemblyName>
+    <Version>1.2.0</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <PackageTags>validation; utilities;</PackageTags>
+    <PackageReleaseNotes>Added optional parameter name argument to valdiation methods.</PackageReleaseNotes>
+  </PropertyGroup>
+
+</Project>
