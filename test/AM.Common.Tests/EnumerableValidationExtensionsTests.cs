@@ -28,7 +28,7 @@ namespace AM.Common.ValidationFramework.Tests
             ArgumentException ex = Assert.Throws<ArgumentException>(() =>
             {
                 IEnumerable<object> obj = new object[] { };
-                obj.Ensure().IsNotEmptyEnumerable(testParamName);
+                obj.Ensure(testParamName).IsNotEmptyEnumerable();
             });
 
             Assert.Equal(testParamName, ex.ParamName);

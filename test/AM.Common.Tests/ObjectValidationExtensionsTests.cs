@@ -30,7 +30,7 @@ namespace AM.Common.ValidationFramework.Tests
             ArgumentNullException aex = Assert.Throws<ArgumentNullException>(() =>
             {
                 object obj = null;
-                obj.Ensure().IsNotNull(testParamName);
+                obj.Ensure(testParamName).IsNotNull();
             });
 
             Assert.Equal(testParamName, aex.ParamName);
