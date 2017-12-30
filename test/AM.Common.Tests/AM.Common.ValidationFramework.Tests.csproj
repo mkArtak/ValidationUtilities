@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AM.Common\AM.Common\AM.Common.ValidationFramework.csproj" />
+    <ProjectReference Include="..\..\src\AM.Common\AM.Common.ValidationFramework.csproj" />
   </ItemGroup>
 
   <ItemGroup>
