@@ -1,42 +1,37 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Xunit;
 
 namespace AM.Common.ValidationFramework.Tests
 {
-    [TestClass]
     public class EnumerableValidationExtensionsTests
     {
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [Fact]
         public void IsNotEmptyEnumerable_ThrowsForEmptyEnumerable()
         {
             IEnumerable<object> items = new object[] { };
-            items.Ensure().IsNotEmptyEnumerable();
+            Assert.Throws<ArgumentException>(() => items.Ensure().IsNotEmptyEnumerable());
         }
 
-        [TestMethod]
+        [Fact]
         public void IsNotEmptyEnumerable_Succeeds()
         {
             IEnumerable<object> items = new object[] { new object() };
             items.Ensure().IsNotEmptyEnumerable();
         }
 
-        [TestMethod]
+        [Fact]
         public void IsNotEmptyEnumerable_ExceptionHasParamName()
         {
             const string testParamName = "testParam";
 
-            try
+            ArgumentException ex = Assert.Throws<ArgumentException>(() =>
             {
                 IEnumerable<object> obj = new object[] { };
                 obj.Ensure().IsNotEmptyEnumerable(testParamName);
-                Assert.Fail();
-            }
-            catch (ArgumentException aex)
-            {
-                Assert.AreEqual(testParamName, aex.ParamName);
-            }
+            });
+
+            Assert.Equal(testParamName, ex.ParamName);
         }
     }
 }

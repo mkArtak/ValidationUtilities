@@ -1,29 +1,27 @@
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace AM.Common.ValidationFramework.Tests
 {
-    [TestClass]
     public class StringValidationExtensionsTests
     {
         #region IsNotNullOrEmpty tests
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [Fact]
         public void IsNotNullOrEmpty_ThrowsForNullArgument()
         {
             string value = null;
-            value.Ensure<string>().IsNotNullOrEmpty();
+
+            Assert.Throws<ArgumentException>(() => value.Ensure<string>().IsNotNullOrEmpty());
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [Fact]
         public void IsNotNullOrEmpty_ThrowsForEmptyArgument()
         {
             string value = string.Empty;
-            value.Ensure<string>().IsNotNullOrEmpty();
+            Assert.Throws<ArgumentException>(() => value.Ensure<string>().IsNotNullOrEmpty());
         }
 
-        [TestMethod]
+        [Fact]
         public void IsNotNullOrEmpty_Succeeds()
         {
             string value = "dummy String";
@@ -33,31 +31,30 @@ namespace AM.Common.ValidationFramework.Tests
         #endregion
 
         #region IsNotNullOrWhitespace tests
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [Fact]
         public void IsNotNullOrWhitespace_ThrowsForNullArgument()
         {
             string value = null;
-            value.Ensure<string>().IsNotNullOrWhitespace();
+
+            Assert.Throws<ArgumentException>(() => value.Ensure<string>().IsNotNullOrWhitespace());
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [Fact]
         public void IsNotNullOrWhitespace_ThrowsForEmptyArgument()
         {
             string value = string.Empty;
-            value.Ensure<string>().IsNotNullOrWhitespace();
+            Assert.Throws<ArgumentException>(() => value.Ensure<string>().IsNotNullOrWhitespace());
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [Fact]
         public void IsNotNullOrWhitespace_ThrowsForWhitespaceArgument()
         {
             string value = "  \n\r\t";
-            value.Ensure<string>().IsNotNullOrWhitespace();
+
+            Assert.Throws<ArgumentException>(() => value.Ensure<string>().IsNotNullOrWhitespace());
         }
 
-        [TestMethod]
+        [Fact]
         public void IsNotNullOrWhitespace_Succeeds()
         {
             string value = "fake string value";
@@ -66,7 +63,7 @@ namespace AM.Common.ValidationFramework.Tests
         }
         #endregion
 
-        [TestMethod]
+        [Fact]
         public void Fluent_Succeeds()
         {
             string value = "testString";

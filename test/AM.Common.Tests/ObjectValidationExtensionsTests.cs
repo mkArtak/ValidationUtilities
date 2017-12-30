@@ -1,41 +1,39 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using Xunit;
 
 namespace AM.Common.ValidationFramework.Tests
 {
-    [TestClass]
     public class ObjectValidationExtensionsTests
     {
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [Fact]
         public void IsNotNull_ThrowsNullReferenceException()
         {
-            object value = null;
-            value.Ensure().IsNotNull();
+            Assert.Throws<ArgumentNullException>(() =>
+            {
+                object value = null;
+                value.Ensure().IsNotNull();
+            });
         }
 
-        [TestMethod]
+        [Fact]
         public void IsNotNull_Succeeds()
         {
             object value = new object();
             value.Ensure().IsNotNull();
         }
 
-        [TestMethod]
+        [Fact]
         public void IsNotNull_ExceptionHasParamName()
         {
             const string testParamName = "testParam";
 
-            try
+            ArgumentNullException aex = Assert.Throws<ArgumentNullException>(() =>
             {
                 object obj = null;
                 obj.Ensure().IsNotNull(testParamName);
-                Assert.Fail();
-            }
-            catch (ArgumentException aex)
-            {
-                Assert.AreEqual(testParamName, aex.ParamName);
-            }
+            });
+
+            Assert.Equal(testParamName, aex.ParamName);
         }
     }
 }
