@@ -4,12 +4,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>AM.Common.ValidationFramework</RootNamespace>
     <AssemblyName>AM.Common.ValidationFramework</AssemblyName>
-    <Version>1.2.0</Version>
+    <Version>2.0.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
-    <PackageTags>validation; utilities;</PackageTags>
-    <PackageReleaseNotes>Added optional parameter name argument to valdiation methods.</PackageReleaseNotes>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <PackageTags>argument validation utilities</PackageTags>
+    <PackageReleaseNotes>Updated the targeting to .Net Standard 2.0</PackageReleaseNotes>
+    <Authors>Artak Mkrtchyan</Authors>
+    <Company />
+    <Description>Contains a set of argument validation utilities</Description>
   </PropertyGroup>
 
 </Project>
