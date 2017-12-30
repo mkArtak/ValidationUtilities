@@ -1,5 +1,5 @@
-# dotnet-standard-utilities
-A set of useful utilitiy libraries, aimed to help with validation.
+# Validation Utilities
+A set of useful utilitiy libraries, aimed to help with argument validation.
 Imagine the below simple example:
 
 ```
