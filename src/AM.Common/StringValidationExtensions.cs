@@ -4,9 +4,9 @@ namespace AM.Common.ValidationFramework
 {
     public static class StringValidationExtensions
     {
-        public static Ensure<string> IsNotNullOrEmpty(this Ensure<string> context, string errorMessage = null)
+        public static ValidationContext<string> IsNotNullOrEmpty(this ValidationContext<string> context, string errorMessage = null)
         {
-            if (String.IsNullOrEmpty(context.ParameterValue))
+            if (String.IsNullOrEmpty(context.Value))
             {
                 if (String.IsNullOrWhiteSpace(errorMessage))
                 {
@@ -19,9 +19,9 @@ namespace AM.Common.ValidationFramework
             return context;
         }
 
-        public static Ensure<string> IsNotNullOrWhitespace(this Ensure<string> context, string errorMessage = null)
+        public static ValidationContext<string> IsNotNullOrWhitespace(this ValidationContext<string> context, string errorMessage = null)
         {
-            if (String.IsNullOrWhiteSpace(context.ParameterValue))
+            if (String.IsNullOrWhiteSpace(context.Value))
             {
                 if (String.IsNullOrWhiteSpace(errorMessage))
                 {

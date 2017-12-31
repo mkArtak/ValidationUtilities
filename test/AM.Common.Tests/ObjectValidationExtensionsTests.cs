@@ -8,11 +8,9 @@ namespace AM.Common.ValidationFramework.Tests
         [Fact]
         public void IsNotNull_ThrowsNullReferenceException()
         {
-            Assert.Throws<ArgumentNullException>(() =>
-            {
-                object value = null;
-                value.Ensure().IsNotNull();
-            });
+            object value = null;
+
+            Assert.Throws<ArgumentNullException>(() => value.Ensure().IsNotNull());
         }
 
         [Fact]
@@ -26,12 +24,9 @@ namespace AM.Common.ValidationFramework.Tests
         public void IsNotNull_ExceptionHasParamName()
         {
             const string testParamName = "testParam";
+            object obj = null;
 
-            ArgumentNullException aex = Assert.Throws<ArgumentNullException>(() =>
-            {
-                object obj = null;
-                obj.Ensure(testParamName).IsNotNull();
-            });
+            ArgumentNullException aex = Assert.Throws<ArgumentNullException>(() => obj.Ensure(testParamName).IsNotNull());
 
             Assert.Equal(testParamName, aex.ParamName);
         }

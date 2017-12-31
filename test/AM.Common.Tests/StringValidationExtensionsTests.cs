@@ -51,8 +51,7 @@ namespace AM.Common.ValidationFramework.Tests
         {
             string value = "  \n\r\t";
 
-            ArgumentException aex = Assert.Throws<ArgumentException>(() => value.Ensure<string>().IsNotNullOrWhitespace());
-            Console.WriteLine(aex.ParamName);
+            Assert.Throws<ArgumentException>(() => value.Ensure<string>().IsNotNullOrWhitespace());
         }
 
         [Fact]
