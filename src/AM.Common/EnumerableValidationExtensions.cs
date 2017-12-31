@@ -11,7 +11,7 @@ namespace AM.Common.ValidationFramework
         /// </summary>
         /// <typeparam name="T">The type parameter for the enumerable items.</typeparam>
         /// <param name="context">The context the validation will be happening in.</param>
-        /// <returns></returns>
+        /// <returns>The validation context being validated.</returns>
         public static ValidationContext<IEnumerable<T>> IsNotEmptyEnumerable<T>(this ValidationContext<IEnumerable<T>> context)
         {
             context.IsNotNull();

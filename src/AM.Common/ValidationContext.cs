@@ -1,7 +1,7 @@
 ﻿namespace AM.Common.ValidationFramework
 {
     /// <summary>
-    /// Represents the validaiton context.
+    /// Represents the validaiton context associated to a specific argument.
     /// </summary>
     /// <typeparam name="T">The type parameter of the argument tp be validated.</typeparam>
     public sealed class ValidationContext<T>
