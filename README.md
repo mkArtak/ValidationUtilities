@@ -25,3 +25,11 @@ public void SomeMethod(string argument1)
 ```
 
 And this is only for a single validation scenario. Imaging a method which have multiple arguments and multiple validation rules which apply to each.
+
+It's also possible to inline the usage as follows:
+```
+public void MyMethod<T>(T param)
+{
+	SomeAction(param.Ensure(nameof(param)).IsNotNull().Value);
+}
+```

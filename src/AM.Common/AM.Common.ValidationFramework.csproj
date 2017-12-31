@@ -13,6 +13,8 @@
     <Authors>Artak Mkrtchyan</Authors>
     <Company />
     <Description>Contains a set of argument validation utilities</Description>
+    <PackageProjectUrl>https://github.com/mkArtak/validation-utilities-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mkArtak/validation-utilities-dotnet</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
