@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard1.0</TargetFramework>
     <RootNamespace>AM.Common.ValidationFramework</RootNamespace>
     <AssemblyName>AM.Common.ValidationFramework</AssemblyName>
-    <Version>2.1</Version>
+    <Version>2.2</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <AssemblyVersion>2.1.0.0</AssemblyVersion>
-    <FileVersion>2.1.0.0</FileVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <FileVersion>2.2.0.0</FileVersion>
     <PackageTags>argument validation utilities</PackageTags>
-    <PackageReleaseNotes>Updated the targeting to .Net Standard 2.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated the targeting to .Net Standard 1.0 to expand the list of consumers</PackageReleaseNotes>
     <Authors>Artak Mkrtchyan</Authors>
     <Company />
     <Description>Contains a set of argument validation utilities</Description>
