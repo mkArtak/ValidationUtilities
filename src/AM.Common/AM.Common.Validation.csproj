@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <RootNamespace>AM.Common.ValidationFramework</RootNamespace>
-    <AssemblyName>AM.Common.ValidationFramework</AssemblyName>
+    <RootNamespace>AM.Common.Validation</RootNamespace>
+    <AssemblyName>AM.Common.Validation</AssemblyName>
     <Version>2.2</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
@@ -13,8 +13,8 @@
     <Authors>Artak Mkrtchyan</Authors>
     <Company />
     <Description>Contains a set of argument validation utilities</Description>
-    <PackageProjectUrl>https://github.com/mkArtak/validation-utilities-dotnet</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/mkArtak/validation-utilities-dotnet</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/mkArtak/validationutilities</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mkArtak/validationutilities</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

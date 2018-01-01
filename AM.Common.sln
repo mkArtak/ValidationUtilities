@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Common.ValidationFramework", "src\AM.Common\AM.Common.ValidationFramework.csproj", "{CD58B1B3-9DDB-4052-9360-42E1D4EC29CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Common.Validation", "src\AM.Common\AM.Common.Validation.csproj", "{CD58B1B3-9DDB-4052-9360-42E1D4EC29CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Common.ValidationFramework.Tests", "test\AM.Common.Tests\AM.Common.ValidationFramework.Tests.csproj", "{16C4F559-76FF-4D76-BB5C-C3014ADD531D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AM.Common.Validation.Tests", "test\AM.Common.Tests\AM.Common.Validation.Tests.csproj", "{16C4F559-76FF-4D76-BB5C-C3014ADD531D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72CAA73C-FFF2-46F7-99C7-89F0653A1FD5}"
 	ProjectSection(SolutionItems) = preProject
