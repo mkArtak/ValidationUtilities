@@ -4,7 +4,7 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <RootNamespace>AM.Common.Validation</RootNamespace>
     <AssemblyName>AM.Common.Validation</AssemblyName>
-    <Version>2.2</Version>
+    <Version>2.3.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
     <FileVersion>2.2.0.0</FileVersion>
@@ -12,7 +12,7 @@
     <PackageReleaseNotes>Updated the targeting to .Net Standard 1.0 to expand the list of consumers</PackageReleaseNotes>
     <Authors>Artak Mkrtchyan</Authors>
     <Company />
-    <Description>Contains a set of argument validation utilities</Description>
+    <Description>This package contains a set of libraries simplifying validation of arguments during codeing.</Description>
     <PackageProjectUrl>https://github.com/mkArtak/validationutilities</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mkArtak/validationutilities</RepositoryUrl>
   </PropertyGroup>
