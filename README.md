@@ -1,5 +1,4 @@
-# Validation Utilities
-A set of useful utilitiy libraries, aimed to help with argument validation.
+# Validation Utilities is a set of useful utilitiy APIs, aimed to help with argument validation.
 Imagine the below simple example:
 
 ```
@@ -16,6 +15,10 @@ public void SomeMethod(string argument1)
 
 This can now be rewritten as:  
 ```
+using AM.Common.Validation;
+
+// ...
+
 public void SomeMethod(string argument1)  
 {  
    argument1.Ensure().IsNotNullOrWhitespace();
@@ -28,6 +31,9 @@ And this is only for a single validation scenario. Imaging a method which have m
 
 It's also possible to inline the usage as follows:
 ```
+using AM.Common.Validation;
+
+// ...
 public void MyMethod<T>(T param)
 {
 	SomeAction(param.Ensure(nameof(param)).IsNotNull().Value);
