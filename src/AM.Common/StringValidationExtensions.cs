@@ -6,32 +6,37 @@ namespace AM.Common.ValidationFramework
     {
         public static ValidationContext<string> IsNotNullOrEmpty(this ValidationContext<string> context, string errorMessage = null)
         {
-            if (String.IsNullOrEmpty(context.Value))
-            {
-                if (String.IsNullOrWhiteSpace(errorMessage))
-                {
-                    throw new ArgumentException();
-                }
-
-                throw new ArgumentException(errorMessage, context.ParameterName);
-            }
-
-            return context;
+            return context.IsNotNull().IsNotEmpty(errorMessage);
         }
 
         public static ValidationContext<string> IsNotNullOrWhitespace(this ValidationContext<string> context, string errorMessage = null)
         {
             if (String.IsNullOrWhiteSpace(context.Value))
             {
-                if (String.IsNullOrWhiteSpace(errorMessage))
-                {
-                    throw new ArgumentException();
-                }
-
-                throw new ArgumentException(errorMessage, context.ParameterName);
+                throw GetArgumentExceptionToThrow(context.ParameterName, errorMessage);
             }
 
             return context;
+        }
+
+        public static ValidationContext<string> IsNotEmpty(this ValidationContext<string> context, string errorMessage = null)
+        {
+            if (context.Value == string.Empty)
+            {
+                throw GetArgumentExceptionToThrow(context.ParameterName, errorMessage);
+            }
+
+            return context;
+        }
+
+        private static ArgumentException GetArgumentExceptionToThrow(string parameterName, string errorMessage)
+        {
+            //if (String.IsNullOrWhiteSpace(errorMessage))
+            //{
+            //  return new ArgumentException();
+            //}
+
+            return new ArgumentException(errorMessage, parameterName);
         }
     }
 }

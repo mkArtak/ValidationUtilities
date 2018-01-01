@@ -11,7 +11,7 @@ namespace AM.Common.ValidationFramework.Tests
         {
             string value = null;
 
-            Assert.Throws<ArgumentException>(() => value.Ensure<string>().IsNotNullOrEmpty());
+            Assert.Throws<ArgumentNullException>(() => value.Ensure<string>().IsNotNullOrEmpty());
         }
 
         [Fact]
@@ -68,6 +68,42 @@ namespace AM.Common.ValidationFramework.Tests
         {
             string value = "testString";
             value.Ensure().IsNotNull().IsNotNullOrEmpty();
+        }
+
+        [Fact]
+        public void IsNotEmpty_Succeeds()
+        {
+            string value = "testString";
+
+            value.Ensure().IsNotEmpty();
+        }
+
+        [Fact]
+        public void IsNotEmpty_ThrowsForEmptyStringWithoutParameterName()
+        {
+            string value = String.Empty;
+
+            Assert.Throws<ArgumentException>(() => value.Ensure().IsNotEmpty());
+        }
+
+        [Fact]
+        public void IsNotEmpty_ThrowsForEmptyStringWithParameterName()
+        {
+            string value = String.Empty;
+
+            ArgumentException aex = Assert.Throws<ArgumentException>(() => value.Ensure(nameof(value)).IsNotEmpty());
+            Assert.Equal(nameof(value), aex.ParamName);
+        }
+
+        [Fact]
+        public void IsNotEmpty_ThrowsErrorWithSpecifiedMessage()
+        {
+            string value = String.Empty;
+            const string errorMessage = "fake error message";
+
+            ArgumentException aex = Assert.Throws<ArgumentException>(() => value.Ensure(nameof(value)).IsNotEmpty(errorMessage));
+            Assert.Equal(nameof(value), aex.ParamName);
+            Assert.Contains(errorMessage, aex.Message);
         }
     }
 }
