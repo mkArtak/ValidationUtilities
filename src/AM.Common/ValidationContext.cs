@@ -1,4 +1,4 @@
-﻿namespace AM.Common.ValidationFramework
+﻿namespace AM.Common.Validation
 {
     /// <summary>
     /// Represents the validaiton context associated to a specific argument.

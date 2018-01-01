@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AM.Common.ValidationFramework
+namespace AM.Common.Validation
 {
     public static class ObjectValidationExtensions
     {

@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace AM.Common.ValidationFramework.Tests
+namespace AM.Common.Validation.Tests
 {
     public class ObjectValidationExtensionsTests
     {
