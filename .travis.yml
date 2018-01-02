@@ -5,4 +5,4 @@ dotnet: 2.0.0
 script:
  - dotnet restore
  - dotnet build
- - dotnet test
+ - dotnet test .\test\AM.Common.Tests\AM.Common.Validation.Tests.csproj
