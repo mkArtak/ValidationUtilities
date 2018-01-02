@@ -1,2 +1,7 @@
 language: csharp
+mono: none
+dotnet: 2.0
 solution: AM.Common.sln
+script:
+ - dotnet restore
+ - dotnet build
