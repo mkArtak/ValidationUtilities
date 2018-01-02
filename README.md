@@ -1,4 +1,6 @@
 # Validation Utilities is a set of useful utilitiy APIs, aimed to help with argument validation.
+
+The NuGet package for this repo can be found at https://www.nuget.org/packages/AM.Common.Validation/
 Imagine the below simple example:
 
 ```
