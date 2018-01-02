@@ -1,4 +1,4 @@
-# Validation Utilities is a set of useful utilitiy APIs, aimed to help with argument validation. [![Build Status](https://travis-ci.org/mkArtak/ValidationUtilities.png)]
+# Validation Utilities is a set of useful utilitiy APIs, aimed to help with argument validation. ![Build Status](https://travis-ci.org/mkArtak/ValidationUtilities.png)
 
 
 The NuGet package for this repo can be found at https://www.nuget.org/packages/AM.Common.Validation/
