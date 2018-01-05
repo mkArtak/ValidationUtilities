@@ -2,6 +2,7 @@
 
 
 The NuGet package for this repo can be found at https://www.nuget.org/packages/AM.Common.Validation/
+
 Imagine the below simple example:
 
 ```
