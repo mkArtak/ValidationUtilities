@@ -4,15 +4,16 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <RootNamespace>AM.Common.Validation</RootNamespace>
     <AssemblyName>AM.Common.Validation</AssemblyName>
-    <Version>2.3.0</Version>
+    <Version>2.4.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
     <FileVersion>2.2.0.0</FileVersion>
     <PackageTags>argument validation utilities</PackageTags>
-    <PackageReleaseNotes>Updated the targeting to .Net Standard 1.0 to expand the list of consumers</PackageReleaseNotes>
+    <PackageReleaseNotes>Switched to interface-based validaiton context extensions to enable covariance.
+This allows piping validation extensions from different areas.</PackageReleaseNotes>
     <Authors>Artak Mkrtchyan</Authors>
     <Company />
-    <Description>This package contains a set of libraries simplifying validation of arguments during codeing.</Description>
+    <Description>This package contains a set of libraries simplifying validation of arguments during coding.</Description>
     <PackageProjectUrl>https://github.com/mkArtak/validationutilities</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mkArtak/validationutilities</RepositoryUrl>
   </PropertyGroup>
