@@ -4,12 +4,12 @@ namespace AM.Common.Validation
 {
     public static class StringValidationExtensions
     {
-        public static ValidationContext<string> IsNotNullOrEmpty(this ValidationContext<string> context, string errorMessage = null)
+        public static IValidationContext<string> IsNotNullOrEmpty(this IValidationContext<string> context, string errorMessage = null)
         {
             return context.IsNotNull().IsNotEmpty(errorMessage);
         }
 
-        public static ValidationContext<string> IsNotNullOrWhitespace(this ValidationContext<string> context, string errorMessage = null)
+        public static IValidationContext<string> IsNotNullOrWhitespace(this IValidationContext<string> context, string errorMessage = null)
         {
             if (String.IsNullOrWhiteSpace(context.Value))
             {
@@ -19,7 +19,7 @@ namespace AM.Common.Validation
             return context;
         }
 
-        public static ValidationContext<string> IsNotEmpty(this ValidationContext<string> context, string errorMessage = null)
+        public static IValidationContext<string> IsNotEmpty(this IValidationContext<string> context, string errorMessage = null)
         {
             if (context.Value == string.Empty)
             {
@@ -31,11 +31,6 @@ namespace AM.Common.Validation
 
         private static ArgumentException GetArgumentExceptionToThrow(string parameterName, string errorMessage)
         {
-            //if (String.IsNullOrWhiteSpace(errorMessage))
-            //{
-            //  return new ArgumentException();
-            //}
-
             return new ArgumentException(errorMessage, parameterName);
         }
     }

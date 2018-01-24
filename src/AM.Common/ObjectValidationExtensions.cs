@@ -4,12 +4,12 @@ namespace AM.Common.Validation
 {
     public static class ObjectValidationExtensions
     {
-        public static ValidationContext<T> Ensure<T>(this T parameter, string parameterName = null)
+        public static IValidationContext<T> Ensure<T>(this T parameter, string parameterName = null)
         {
             return new ValidationContext<T>(parameter, parameterName);
         }
 
-        public static ValidationContext<T> IsNotNull<T>(this ValidationContext<T> context) where T : class
+        public static IValidationContext<T> IsNotNull<T>(this IValidationContext<T> context) where T : class
         {
             if (context.Value == null)
             {
