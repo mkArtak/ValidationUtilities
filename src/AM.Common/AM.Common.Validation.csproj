@@ -4,10 +4,10 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <RootNamespace>AM.Common.Validation</RootNamespace>
     <AssemblyName>AM.Common.Validation</AssemblyName>
-    <Version>2.4.0</Version>
+    <Version>2.5.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <AssemblyVersion>2.2.0.0</AssemblyVersion>
-    <FileVersion>2.2.0.0</FileVersion>
+    <AssemblyVersion>2.5.0.0</AssemblyVersion>
+    <FileVersion>2.5.0.0</FileVersion>
     <PackageTags>argument validation utilities</PackageTags>
     <PackageReleaseNotes>Switched to interface-based validaiton context extensions to enable covariance.
 This allows piping validation extensions from different areas.</PackageReleaseNotes>
