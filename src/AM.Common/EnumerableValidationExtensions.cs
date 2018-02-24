@@ -37,7 +37,7 @@ namespace AM.Common.Validation
 
             if (index < 0 || index >= context.Value.Count())
             {
-                throw new ArgumentOutOfRangeException(nameof(context.ParameterName));
+                throw new ArgumentOutOfRangeException(context.ParameterName);
             }
 
             return context;

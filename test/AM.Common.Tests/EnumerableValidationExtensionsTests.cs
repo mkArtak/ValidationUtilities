@@ -77,9 +77,7 @@ namespace AM.Common.Validation.Tests
         {
             IEnumerable<object> obj = new object[] { 1 };
 
-            ArgumentOutOfRangeException aex = Assert.Throws<ArgumentOutOfRangeException>(() => obj.Ensure(nameof(obj)).IsValidIndex(0));
-
-            Assert.Equal(nameof(obj), aex.ParamName);
+            obj.Ensure(nameof(obj)).IsValidIndex(0);
         }
     }
 }
