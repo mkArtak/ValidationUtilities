@@ -9,8 +9,7 @@
     <AssemblyVersion>2.5.1.0</AssemblyVersion>
     <FileVersion>2.5.1.0</FileVersion>
     <PackageTags>argument validation utilities</PackageTags>
-    <PackageReleaseNotes>Switched to interface-based validaiton context extensions to enable covariance.
-This allows piping validation extensions from different areas.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added IsVaildIndex() API to the IValidationContext&lt;IEnumerable&lt;T&gt;&gt; context.</PackageReleaseNotes>
     <Authors>Artak Mkrtchyan</Authors>
     <Company />
     <Description>This package contains a set of libraries simplifying validation of arguments during coding.</Description>
