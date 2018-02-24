@@ -23,5 +23,24 @@ namespace AM.Common.Validation
 
             return context;
         }
+
+        /// <summary>
+        /// Validates that the specified <see cref="index"/> is within the range of the enumerable being validated.
+        /// </summary>
+        /// <typeparam name="T">The type parameter for the enumerable items.</typeparam>
+        /// <param name="context">The context the validation will be happening in.</param>
+        /// <param name="index">The index to be validated.</param>
+        /// <returns>The validation context being validated.</returns>
+        public static IValidationContext<IEnumerable<T>> IsValidIndex<T>(this IValidationContext<IEnumerable<T>> context, int index)
+        {
+            context.IsNotEmptyEnumerable();
+
+            if (index < 0 || index >= context.Value.Count())
+            {
+                throw new ArgumentOutOfRangeException(nameof(context.ParameterName));
+            }
+
+            return context;
+        }
     }
 }
