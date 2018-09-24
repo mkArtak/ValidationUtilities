@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace AM.Common.Validation
 {
@@ -18,6 +19,7 @@ namespace AM.Common.Validation
             this.propertyInfo = this.GetPropertyInfo(source, propertyExpression ?? throw new ArgumentNullException(nameof(propertyExpression)));
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private PropertyInfo GetPropertyInfo(TSource instance, Expression<Func<TSource, TProperty>> propertyExpression)
         {
             MemberExpression mexp = propertyExpression.Body as MemberExpression;

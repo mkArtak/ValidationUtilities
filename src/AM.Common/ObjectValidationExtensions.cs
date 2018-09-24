@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 
 namespace AM.Common.Validation
 {
@@ -15,6 +16,7 @@ namespace AM.Common.Validation
             return new PropertyValidationContext<TSource, TProperty>(source, expr);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IValidationContext<T> IsNotNull<T>(this IValidationContext<T> context) where T : class
         {
             if (context.Value == null)

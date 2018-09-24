@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace AM.Common.Validation
 {
@@ -12,6 +13,7 @@ namespace AM.Common.Validation
         /// <typeparam name="T">The type parameter for the enumerable items.</typeparam>
         /// <param name="context">The context the validation will be happening in.</param>
         /// <returns>The validation context being validated.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IValidationContext<IEnumerable<T>> IsNotEmptyEnumerable<T>(this IValidationContext<IEnumerable<T>> context)
         {
             context.IsNotNull();
@@ -31,6 +33,7 @@ namespace AM.Common.Validation
         /// <param name="context">The context the validation will be happening in.</param>
         /// <param name="index">The index to be validated.</param>
         /// <returns>The validation context being validated.</returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IValidationContext<IEnumerable<T>> IsValidIndex<T>(this IValidationContext<IEnumerable<T>> context, int index)
         {
             context.IsNotEmptyEnumerable();
