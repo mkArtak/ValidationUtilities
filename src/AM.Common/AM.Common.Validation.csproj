@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0;netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
     <RootNamespace>AM.Common.Validation</RootNamespace>
     <AssemblyName>AM.Common.Validation</AssemblyName>
-    <Version>2.5.1</Version>
+    <Version>2.5.2</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <AssemblyVersion>2.5.1.0</AssemblyVersion>
     <FileVersion>2.5.1.0</FileVersion>
