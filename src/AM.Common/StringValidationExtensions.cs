@@ -34,6 +34,17 @@ namespace AM.Common.Validation
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static IValidationContext<string> IsNotLongerThan(this IValidationContext<string> context, int maxLength, string errorMessage = null)
+        {
+            if (context.Value.Length > maxLength)
+            {
+                throw GetArgumentExceptionToThrow(context.ParameterName, errorMessage);
+            }
+
+            return context;
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static ArgumentException GetArgumentExceptionToThrow(string parameterName, string errorMessage)
         {
             return new ArgumentException(errorMessage, parameterName);

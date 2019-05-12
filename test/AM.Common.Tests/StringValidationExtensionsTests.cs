@@ -105,5 +105,25 @@ namespace AM.Common.Validation.Tests
             Assert.Equal(nameof(value), aex.ParamName);
             Assert.Contains(errorMessage, aex.Message);
         }
+
+        [Fact]
+        public void IsNotLongerThan_ThrowsForStringWithLengthLongerThanTheSpecifiedOne()
+        {
+            string value = "abcd";
+
+            const string errorMessage = "fake error message";
+
+            ArgumentException aex = Assert.Throws<ArgumentException>(() => value.Ensure(nameof(value)).IsNotLongerThan(value.Length - 1, errorMessage));
+            Assert.Equal(nameof(value), aex.ParamName);
+            Assert.Contains(errorMessage, aex.Message);
+        }
+
+        [Fact]
+        public void IsNotLongerThan_Succeeds()
+        {
+            string value = "abcd";
+
+            value.Ensure(nameof(value)).IsNotLongerThan(value.Length);
+        }
     }
 }
