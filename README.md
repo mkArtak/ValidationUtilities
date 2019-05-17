@@ -11,7 +11,12 @@ public void SomeMethod(string argument1)
    if (string.IsNullOrWhiteSpace(argument1))  
    {  
        throw new ArgumentException("Invalid value");  
-   }    
+   }
+   
+   if (argument1.Length > 4)
+   {
+       throw new ArgumentException("invalid length");
+   }
      
    // some logic here.  
 }  
@@ -25,7 +30,7 @@ using AM.Common.Validation;
 
 public void SomeMethod(string argument1)  
 {  
-   argument1.Ensure().IsNotNullOrWhitespace();
+   argument1.Ensure(nameof(argument1)).IsNotNullOrWhitespace("Invalid value").IsNotLongerThan(4, "Invalid length");
    
   // some logic here.  
 }  
